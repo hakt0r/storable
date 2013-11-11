@@ -1,0 +1,33 @@
+{
+  "author": "Sebastian Glaser <anx@ulzq.de> (http://github.com/hakt0r/storable)",
+  "name": "storable",
+  "description": "simple json-to-file storable objects",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hakt0r/storable.git"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "prepublish": "coffee -bco ./ ./index.coffee"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  },
+  "keywords": [
+    "storable",
+    "json",
+    "object",
+    "simple"
+  ],
+  "readmeFilename": "README.md",
+  "gitHead": "d9f7fce168f55d80dc9f9d0977b8e42d68d6586c",
+  "bugs": {
+    "url": "https://github.com/hakt0r/storable/issues"
+  },
+  "dependencies": {},
+  "license": "GPLv3"
+}
