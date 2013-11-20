@@ -24,6 +24,8 @@
   
   http://www.gnu.org/licenses/gpl.html ###
 
+fs = require 'fs'
+
 module.exports = class Storable
   constructor : (@path, opts={}) -> { @defaults, override } = opts; null
   read : (callback) =>
@@ -37,10 +39,10 @@ module.exports = class Storable
       @[k] = v for k,v of inp
       callback inp if callback?
     fs.readFile @path, (err, data) =>
-      log 'error', err if err
+      console.log 'error', err if err
       try _read JSON.parse data.toString('utf8')
       catch e
-        log 'error', e; _read {}; @save()
+        console.log 'error', e; _read {}; @save()
     null
   override : (opts={}) =>
     change = no
